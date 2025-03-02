@@ -1,0 +1,79 @@
+@charset "UTF-8";
+@keyframes shine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #000000;
+    --tertiary-color: #FFAA00;
+    --quaternary-color: #716A5C;
+}
+
+@media all { /*mobile / geral */
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    height: 100dvh;
+    background: linear-gradient(45deg, #ffd700, #ffac00, #ffcc33, #ffe066, #ffd700);
+}
+header {
+    background-color: var(--primary-color);
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+header h1 {
+    font-size: 40px; /* Tamanho grande para destacar */
+    font-weight: bold; /* Deixa o texto mais forte */
+    text-transform: uppercase; /* Deixa o texto todo em maiúsculas */
+    text-align: center; /* Centraliza o texto */
+
+    background: linear-gradient(90deg, #caae2f, #d4b500, #B8860B, #d6b603, #caae30); 
+    background-size: 200% auto; /* Faz o gradiente se movimentar */
+    color: transparent; /* Esconde a cor padrão do texto */
+    -webkit-background-clip: text; /* Permite que o background fique dentro do texto */
+    background-clip: text; /* Suporte para outros navegadores */
+    animation: shine 5s linear infinite;
+}
+header nav {
+    width: 100%;
+}
+header nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+}
+header nav ul li {
+    list-style: none;
+}
+header nav ul li:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+    color: black;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+header nav ul li a:hover {
+    background-color: #fff;
+    color: black;
+    transition: 0.3s;
+
+}
+
+}
