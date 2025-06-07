@@ -1,0 +1,16 @@
+/* Aplica para TODOS os arquivos Excalidraw */
+.excalidraw, 
+.excalidraw.theme--dark,
+.theme-dark .excalidraw {
+  --color-canvas-background: #ffffff !important; /* Branco puro */
+}
+
+/* Força o canvas */
+.excalidraw-canvas {
+  background-color: #ffffff !important;
+}
+
+/* Remove variação de tema */
+.excalidraw .theme-toggle {
+  display: none !important;
+}
